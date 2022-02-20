@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+    private:
+        ports:
+            - '8080:8080'
+        container_name: jmusicbot
+        environment:
+            - TOKEN=${TOKEN}
+            - OWNER=${OWNER}
+        env_file:
+            - .env
+        image: 'elierton/private:jmusicbot'
